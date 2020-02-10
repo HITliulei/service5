@@ -21,5 +21,10 @@ public class provider {
     public String getVersion(){
         return this.version;
     }
-    
+
+    @GetMapping("/version")
+    public String getVer(){
+        return "v1.1.0";
+    }
+
 }
