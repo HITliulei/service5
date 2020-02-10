@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service5
+server:
+  port: 8050
+eureka:
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      serviceName: service5
+      version: v1.0.0
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${MCLUSTER_IP}:${MCLUSTER_PORT}/eureka
