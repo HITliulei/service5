@@ -17,14 +17,9 @@ public class provider {
     @Value("${eureka.instance.metadata-map.version}")
     private String version;
 
-    @GetMapping("/getServiceInfo")
+    @GetMapping("/only2")
     public String getVersion(){
         return this.version;
-    }
-
-    @GetMapping("/version")
-    public String getVer(){
-        return "v1.1.0";
     }
 
 }
